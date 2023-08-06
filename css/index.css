@@ -11,6 +11,7 @@
 :root {
     --background-color1: #101713;
     --background-color2: #9fa3a1;
+    --background-color3: #f19292;
     --font-color1:#ffffff;
 }
 
@@ -19,17 +20,35 @@ header {
     background-color: var(--background-color1);
     height: 120px;
     color: var(--font-color1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#logodrafabiola {
+    width: 450px;
+    height: 310px;
+}
+
+#logodra {
+    border-radius: 5%;
+    justify-content: end;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
 }
 
 
 main {
-    background-color: var(--background-section1);   
+    
 }
 
 
 body {
     font-family: 'Raleway', sans-serif;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -41,25 +60,28 @@ body {
 }
 
 section {
-    background-color: var(--background-color2)
+    background-color: var(--background-color3);
     
 
 }
 
 .mostrar {
     margin-top:30px;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
+    
+    display: inline-block;
 }
 
 .botones {
-
+    width: 100%;
 }
 
 footer {
     background: var(--background-color1);
     height: 120px;
     color: var(--font-color1);
-    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
 }
 
 
