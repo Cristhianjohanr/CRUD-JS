@@ -1,6 +1,6 @@
-const nombreUI = document.querySelector("#nombre");
-const telefonoUI = document.querySelector("#telefono");
-const precioUI = document.querySelector("#precio");
+const pacienteUI = document.querySelector("#paciente");
+const identificacionUI = document.querySelector("#identificacion");
+const servicioUI = document.querySelector("#servicio");
 const enviarBTN = document.querySelector("#btn");
 const mostrar = document.querySelector(".mostrar");
 const formulario = document.querySelector("#formulario");
@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", pintar);
 function agregar(event) {
     event.preventDefault();
     const objeto = {
-        nombre: nombreUI.value,
-        telefono: telefonoUI.value,
-        precio: precioUI.value
+        paciente: pacienteUI.value,
+        identificacion: identificacionUI.value,
+        servicio: servicioUI.value
     }
 
     datos = JSON.parse(localStorage.getItem("valores"));
@@ -35,9 +35,9 @@ function pintar(){
     .map((dato, index) => {
         return `
         <div class="card">
-        <h3>${dato.nombre}</h3>
-        <h3>${dato.telefono}</h3>
-        <h3>${dato.precio}</h3>
+        <h3>${dato.paciente}</h3>
+        <h3>${dato.identificacion}</h3>
+        <h3>${dato.servicio}</h3>
         <button class="botones" onClick="editar(${index})">editar</button>
         <button class="botones" onClick="borrar(${index})">borrar</button>
         </div>
@@ -48,12 +48,12 @@ function pintar(){
 
  
 function editar(index){
-const nombreEdit = prompt("edita el nombre", datos[index].nombre)
-datos[index].nombre =nombreEdit;
-const telefonoEdit = prompt("edita el telefono", datos[index].telefono)
-datos[index].telefono =telefonoEdit;
-const precioEdit = prompt("edita el precio", datos[index].precio)
-datos[index].precio =precioEdit;
+const pacienteEdit = prompt("edita el paciente", datos[index].paciente)
+datos[index].paciente =pacienteEdit;
+const identificacionEdit = prompt("edita el telefono", datos[index].identificacion)
+datos[index].identificacion =identificacionEdit;
+const servicioEdit = prompt("edita el precio", datos[index].servicio)
+datos[index].servicio =servicioEdit;
 
 localStorage.setItem("valores",JSON.stringify(datos))
 pintar()
