@@ -10,7 +10,6 @@
 /*DEFINICIÓN DE VARIABLES COROLES*/
 :root {
     --background-color1: #101713;
-    --background-color2: #9fa3a1;
     --background-color3: #f19292;
     --font-color1:#ffffff;
 }
@@ -23,6 +22,7 @@ header {
     padding: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #logodrafabiola {
@@ -38,9 +38,9 @@ header {
     margin-top: 100px;
 }
 
-
-main {
-    
+#fabiolarodriguez {
+    width: 80%;
+    margin-left: 150px;
 }
 
 
@@ -53,10 +53,11 @@ body {
 
 
 #formulario {
-    margin-top: 40px;
-    margin-left: 20px;
-    display: inline-block;
-
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-content: space-between;
+    height: 100px;
 }
 
 section {
@@ -66,10 +67,11 @@ section {
 }
 
 .mostrar {
-    margin-top:30px;
-    /*margin-left: 20px;*/
-    
-    display: inline-block;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-content: space-between;
+    height: 120px;
 }
 
 .botones {
@@ -78,25 +80,19 @@ section {
 
 footer {
     background: var(--background-color1);
-    height: 120px;
+    height: 80px;
     color: var(--font-color1);
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
-
 
 
 /* Dispositivos con un ancho máximo de 600px */
 @media (max-width: 600px) {
     header {
-       background-color: var(--nombre-color);
-       height: 550px;
+       height: 120px;
        width: 100%;
-       display: block;
-    }
-
-    header p {
-        text-align:left;
+       display: flex;
     }
 
     main {
@@ -105,25 +101,13 @@ footer {
         gap: 12px;
     }
 
-    main .article {
-        gap: 12px;
-    }
-
-    .container {
-        gap: 12px;
-        width: 10%;
-    }
-
-    .article {
-        width: 50%;
-    }
-
-    .blog {
-        margin-bottom: 20px;
+    #fabiolarodriguez {
+        width: 80%;
+        margin-left: 40px;
     }
 
     footer section {
-        background-color: #000101;
+        --background-color1: #101713;
     }
 
     footer section div {
